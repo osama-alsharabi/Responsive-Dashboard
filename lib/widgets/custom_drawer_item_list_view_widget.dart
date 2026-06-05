@@ -34,15 +34,15 @@ class _CustomDrawerItemListViewWidgetState
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return SliverList.builder(
       itemCount: drawerItems.length,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
-            seletedItem = index;
-            setState(() {});
+            if (seletedItem != index) {
+              seletedItem = index;
+              setState(() {});
+            }
           },
           child: Padding(
             padding: const EdgeInsets.only(top: 20.0),

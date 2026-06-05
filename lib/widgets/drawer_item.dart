@@ -9,7 +9,7 @@ class DrawerItem extends StatelessWidget {
   const DrawerItem({
     super.key,
     required this.drawerItemModel,
-    required this.isSelected,
+    this.isSelected = false,
   });
 
   @override
