@@ -5,13 +5,29 @@ import 'package:responsive_dashboard/utils/app_styles.dart';
 
 class DrawerItem extends StatelessWidget {
   final DrawerItemModel drawerItemModel;
-  const DrawerItem({super.key, required this.drawerItemModel});
+  final bool isSelected;
+  const DrawerItem({
+    super.key,
+    required this.drawerItemModel,
+    required this.isSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Text(drawerItemModel.title, style: AppStyles.textStyle16Regular),
+      title: Text(
+        drawerItemModel.title,
+        style: isSelected
+            ? AppStyles.textStyle16Bold
+            : AppStyles.textStyle16Regular,
+      ),
+      trailing: AnimatedContainer(
+        duration: const Duration(milliseconds: 150),
+        height: isSelected ? 1000 : 0,
+        width: 3.27,
+        color: const Color(0xff4EB7F2),
+      ),
     );
   }
 }
