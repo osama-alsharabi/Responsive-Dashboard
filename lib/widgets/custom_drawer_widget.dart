@@ -13,7 +13,7 @@ class CustomDrawerWidget extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(child: SizedBox(height: 20)),
+            SliverToBoxAdapter(child: SizedBox(height: 40)),
             SliverToBoxAdapter(child: UserInfoListTileWidget()),
             CustomDrawerItemListViewWidget(),
             SliverFillRemaining(
