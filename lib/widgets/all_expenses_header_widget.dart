@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/utils/app_styles.dart';
+
+class AllExpensesHeaderWidget extends StatelessWidget {
+  const AllExpensesHeaderWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        const Text("All Expenses", style: AppStyles.textStyle20SemiBold),
+        const Spacer(),
+        Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: const Color(0xffF1F1F1)),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text("Monthly", style: AppStyles.textStyle16Medium),
+              const SizedBox(width: 18),
+              Center(
+                child: Transform.rotate(
+                  angle: -1.57079633,
+                  child: const Icon(
+                    Icons.arrow_back_ios_new_outlined,
+                    color: Color(0xff064061),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}

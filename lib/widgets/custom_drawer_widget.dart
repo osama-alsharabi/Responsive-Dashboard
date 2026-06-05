@@ -7,18 +7,21 @@ class CustomDrawerWidget extends StatelessWidget {
   const CustomDrawerWidget({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(child: SizedBox(height: 20)),
-          SliverToBoxAdapter(child: UserInfoListTileWidget()),
-          CustomDrawerItemListViewWidget(),
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: DrawerFooterWidget(),
-          ),
-        ],
+    return Container(
+      color: Colors.white,
+      child: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(child: SizedBox(height: 20)),
+            SliverToBoxAdapter(child: UserInfoListTileWidget()),
+            CustomDrawerItemListViewWidget(),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: DrawerFooterWidget(),
+            ),
+          ],
+        ),
       ),
     );
   }

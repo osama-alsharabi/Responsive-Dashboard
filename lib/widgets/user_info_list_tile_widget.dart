@@ -14,7 +14,10 @@ class UserInfoListTileWidget extends StatelessWidget {
       child: ListTile(
         leading: SvgPicture.asset(AppAssets.imagesAvatar1),
         title: const Text("Lekan Okeowo", style: AppStyles.textStyle16SemiBold),
-        subtitle: const Text("data", style: AppStyles.textStyle12Regular),
+        subtitle: const Text(
+          "demo@gmail.com",
+          style: AppStyles.textStyle12Regular,
+        ),
       ),
     );
   }
