@@ -50,8 +50,8 @@ class AppAssets {
   /// assets/images/avatar2.svg
   static const String imagesAvatar2 = "assets/images/avatar2.svg";
 
-  /// Assets for imagesCardMask
-  /// assets/images/card_mask.svg
-  static const String imagesCardMask = "assets/images/card_mask.svg";
+  /// Assets for imagesMaskGroup
+  /// assets/images/mask_group.png
+  static const String imagesMaskGroup = "assets/images/mask_group.png";
 }
 
