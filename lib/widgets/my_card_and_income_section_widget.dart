@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/widgets/income_section_widget.dart';
 import 'package:responsive_dashboard/widgets/my_card_and_transcation_history_section_widget.dart';
 
 class MyCardAndIncomeSectionWidget extends StatelessWidget {
@@ -10,6 +11,8 @@ class MyCardAndIncomeSectionWidget extends StatelessWidget {
       children: [
         SizedBox(height: 40),
         MyCardAndTranscationHistorySectionWidget(),
+        SizedBox(height: 24),
+        IncomeSectionWidget(),
         SizedBox(height: 24),
       ],
     );
