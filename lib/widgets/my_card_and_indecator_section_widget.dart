@@ -31,7 +31,7 @@ class _MyCardAndIndecatorSectionWidgetState
     pageController = PageController();
     pageController.addListener(() {
       setState(() {
-        currentPageIndex = pageController.page!.toInt();
+        currentPageIndex = pageController.page!.round();
       });
     });
     super.initState();
