@@ -10,6 +10,7 @@ class MyCardAndIncomeSectionWidget extends StatelessWidget {
       children: [
         SizedBox(height: 40),
         MyCardAndTranscationHistorySectionWidget(),
+        SizedBox(height: 24),
       ],
     );
   }

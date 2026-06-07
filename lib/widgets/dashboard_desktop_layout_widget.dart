@@ -20,7 +20,7 @@ class DashboardDesktopLayoutWidget extends StatelessWidget {
         ),
         SizedBox(width: 24),
         Expanded(
-          flex: 2,
+          flex: 1,
           child: SingleChildScrollView(child: MyCardAndIncomeSectionWidget()),
         ),
         SizedBox(width: 32),
