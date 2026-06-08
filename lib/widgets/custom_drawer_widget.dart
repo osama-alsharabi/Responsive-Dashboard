@@ -9,9 +9,10 @@ class CustomDrawerWidget extends StatelessWidget {
   const CustomDrawerWidget({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: const Padding(
+    return const Drawer(
+      backgroundColor: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.zero),
+      child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: CustomScrollView(
           slivers: [
