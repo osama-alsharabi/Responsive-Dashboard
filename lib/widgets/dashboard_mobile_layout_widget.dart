@@ -12,6 +12,7 @@ class DashboardMobileLayoutWidget extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
           children: [
+            SizedBox(height: 20),
             AllExpensesAndQuickInvoiceSectionWidget(),
             MyCardAndIncomeSectionWidget(),
           ],

@@ -13,7 +13,7 @@ class DashboardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const CustomDrawerWidget(),
-      appBar: MediaQuery.sizeOf(context).width <= 600
+      appBar: MediaQuery.sizeOf(context).width <= 815
           ? const CustomAppBarWidget()
           : null,
       backgroundColor: const Color(0xffF7F9FA),

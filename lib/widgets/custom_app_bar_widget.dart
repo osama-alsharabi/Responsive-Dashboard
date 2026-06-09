@@ -6,14 +6,14 @@ class CustomAppBarWidget extends StatelessWidget
   const CustomAppBarWidget({super.key});
 
   @override
-  Size get preferredSize => const Size(double.infinity, 75);
+  Size get preferredSize => const Size(double.infinity, 90);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
         child: Row(
           children: [
             IconButton(
@@ -25,7 +25,7 @@ class CustomAppBarWidget extends StatelessWidget
             const Spacer(),
             Text(
               "Responsive Dashboard",
-              style: AppStyles.textStyle20Medium.copyWith(
+              style: AppStyles.textStyle20SemiBold.copyWith(
                 color: const Color(0xff4EB7F2),
               ),
             ),
