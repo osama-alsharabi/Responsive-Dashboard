@@ -8,8 +8,8 @@ This project bridges the gap between high-fidelity UI design and structural fron
 
 ## 🔗 Project References
 
-* **Educational Course:** Built following the advanced layout principles from the course [Mastering Flutter: Responsive & Adaptive UI Design (Arabic)](https://udemy.com) on Udemy by Instructor **Tharwat Samy**.
-* **UI/UX Design Spec:** Developed directly from this professional [Figma Admin Dashboard Design Community Template](https://figma.com).
+* **Educational Course:** Built following the advanced layout principles from the course [Mastering Flutter: Responsive & Adaptive UI Design (Arabic)](www.udemy.com/course/mastering-flutter-responsive-adaptive-ui-design-arabic/) on Udemy by Instructor **Tharwat Samy**.
+* **UI/UX Design Spec:** Developed directly from this professional [Figma Admin Dashboard Design Community Template](https://www.figma.com/design/MaVFj6GIkC4oUYj6DYx4E8/Admin-Dashboard--Community-?m=auto&t=uZIzSIKxX7bEo2pZ-6).
 
 ---
 
@@ -66,12 +66,12 @@ Here is a look at the production-level code implementations that form the core s
 import 'package:flutter/material.dart';
 import '../constants/app_breakpoints.dart';
 
-class ResponsiveLayout extends StatelessWidget {
+class AdaptiveLayoutWidget extends StatelessWidget {
   final Widget mobileLayout;
   final Widget tabletLayout;
   final Widget desktopLayout;
 
-  const ResponsiveLayout({
+  const AdaptiveLayoutWidget({
     super.key,
     required this.mobileLayout,
     required this.tabletLayout,
@@ -82,12 +82,12 @@ class ResponsiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth >= AppBreakpoints.desktop) {
-          return desktopLayout;
-        } else if (constraints.maxWidth >= AppBreakpoints.tablet) {
+        if (constraints.maxWidth <= SizeConfig.mobile) {
+          return mobile;
+        } else if (constraints.maxWidth <= SizeConfig.tablet) {
           return tabletLayout;
         } else {
-          return mobileLayout;
+          return desktopLayout;
         }
       },
     );
@@ -107,8 +107,8 @@ Follow these commands to deploy, configure, and review this system locally on yo
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com
-   cd your-repository-name
+   git clone https://github.com/osama-alsharabi/Responsive-Dashboard.git
+   cd Responsive-Dashboard
    ```
 
 2. **Verify Dependencies and Flutter SDK:**
