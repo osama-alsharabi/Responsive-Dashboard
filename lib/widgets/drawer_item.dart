@@ -19,8 +19,8 @@ class DrawerItem extends StatelessWidget {
       title: Text(
         drawerItemModel.title,
         style: isSelected
-            ? AppStyles.textStyle16Bold
-            : AppStyles.textStyle16Regular,
+            ? AppStyles.textStyle16Bold(context)
+            : AppStyles.textStyle16Regular(context),
       ),
       trailing: AnimatedContainer(
         duration: const Duration(milliseconds: 150),

@@ -19,14 +19,14 @@ class IncomeChartDetailsListViewWidget extends StatelessWidget {
                 children: [
                   const CircleAvatar(radius: 7),
                   const SizedBox(width: 12),
-                  const Text(
+                   Text(
                     "Design service",
-                    style: AppStyles.textStyle16Regular,
+                    style: AppStyles.textStyle16Regular(context),
                   ),
                   const Spacer(),
                   Text(
                     "40%",
-                    style: AppStyles.textStyle16Medium.copyWith(
+                    style: AppStyles.textStyle16Medium(context).copyWith(
                       color: const Color(0xff208CC8),
                     ),
                   ),

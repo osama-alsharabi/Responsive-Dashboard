@@ -9,14 +9,17 @@ class TransactionHeaderWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text("Transaction History", style: AppStyles.textStyle20SemiBold),
+        Text(
+          "Transaction History",
+          style: AppStyles.textStyle20SemiBold(context),
+        ),
         TextButton(
           onPressed: () {},
           child: Text(
             "See all",
-            style: AppStyles.textStyle16Medium.copyWith(
-              color: const Color(0xff4EB7F2),
-            ),
+            style: AppStyles.textStyle16Medium(
+              context,
+            ).copyWith(color: const Color(0xff4EB7F2)),
           ),
         ),
       ],

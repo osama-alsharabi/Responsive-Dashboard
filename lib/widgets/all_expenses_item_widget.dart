@@ -34,21 +34,21 @@ class AllExpensesItemWidget extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             allExpensesItemModel.title,
-            style: AppStyles.textStyle16SemiBold.copyWith(
+            style: AppStyles.textStyle16SemiBold(context).copyWith(
               color: isBalance ? Colors.white : null,
             ),
           ),
           const SizedBox(height: 8),
           Text(
             allExpensesItemModel.date,
-            style: AppStyles.textStyle14Regular.copyWith(
+            style: AppStyles.textStyle14Regular(context).copyWith(
               color: isBalance ? Colors.white : null,
             ),
           ),
           const SizedBox(height: 16),
           Text(
             "\$${formatNumber(allExpensesItemModel.balance)}",
-            style: AppStyles.textStyle24SemiBold.copyWith(
+            style: AppStyles.textStyle24SemiBold(context).copyWith(
               color: isBalance ? Colors.white : null,
             ),
           ),

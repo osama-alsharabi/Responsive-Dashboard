@@ -16,17 +16,17 @@ class TransactionCardWidget extends StatelessWidget {
         contentPadding: const EdgeInsets.all(16),
         title: Text(
           transactionModel.title,
-          style: AppStyles.textStyle16SemiBold,
+          style: AppStyles.textStyle16SemiBold(context),
         ),
         subtitle: Text(
           transactionModel.data,
-          style: AppStyles.textStyle16Regular.copyWith(
+          style: AppStyles.textStyle16Regular(context).copyWith(
             color: const Color(0xffAAAAAA),
           ),
         ),
         trailing: Text(
           "\$${formatNumber(transactionModel.amount)}",
-          style: AppStyles.textStyle20SemiBold.copyWith(
+          style: AppStyles.textStyle20SemiBold(context).copyWith(
             color: transactionModel.isWithDrawal
                 ? const Color(0xfff3735e)
                 : const Color(0xff7DD97B),

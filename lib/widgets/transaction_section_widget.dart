@@ -16,7 +16,7 @@ class TransactionSectionWidget extends StatelessWidget {
         const SizedBox(height: 20),
         Text(
           "13 April 2022",
-          style: AppStyles.textStyle16Medium.copyWith(
+          style: AppStyles.textStyle16Medium(context).copyWith(
             color: const Color(0xffAAAAAA),
           ),
         ),

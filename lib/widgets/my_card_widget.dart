@@ -29,12 +29,12 @@ class MyCardWidget extends StatelessWidget {
           children: [
             Text(
               "Name card",
-              style: AppStyles.textStyle16Regular.copyWith(color: Colors.white),
+              style: AppStyles.textStyle16Regular(context).copyWith(color: Colors.white),
             ),
             const SizedBox(height: 8),
             Text(
               "Syah Bandi",
-              style: AppStyles.textStyle20Medium.copyWith(color: Colors.white),
+              style: AppStyles.textStyle20Medium(context).copyWith(color: Colors.white),
             ),
             const Spacer(),
             Align(
@@ -46,14 +46,14 @@ class MyCardWidget extends StatelessWidget {
                     fit: BoxFit.scaleDown,
                     child: Text(
                       "0918 8124 0042 8129",
-                      style: AppStyles.textStyle24SemiBold.copyWith(
+                      style: AppStyles.textStyle24SemiBold(context).copyWith(
                         color: Colors.white,
                       ),
                     ),
                   ),
                   Text(
                     "12/20 - 124",
-                    style: AppStyles.textStyle16Regular.copyWith(
+                    style: AppStyles.textStyle16Regular(context).copyWith(
                       color: Colors.white,
                     ),
                   ),

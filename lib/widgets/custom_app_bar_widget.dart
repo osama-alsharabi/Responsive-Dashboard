@@ -25,7 +25,7 @@ class CustomAppBarWidget extends StatelessWidget
             const Spacer(),
             Text(
               "Responsive Dashboard",
-              style: AppStyles.textStyle20SemiBold.copyWith(
+              style: AppStyles.textStyle20SemiBold(context).copyWith(
                 color: const Color(0xff4EB7F2),
               ),
             ),
