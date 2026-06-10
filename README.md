@@ -117,12 +117,8 @@ Follow these commands to deploy, configure, and review this system locally on yo
    flutter pub get
    ```
 
-3. **Run Code Generation (If using local models/localization packages):**
-   ```bash
-   flutter pub run build_runner build --delete-conflicting-outputs
-   ```
 
-4. **Execute on Specific Target Devices:**
+3. **Execute on Specific Target Devices:**
    * **To test desktop constraints:**
      ```bash
      flutter run -d windows # Or macos / linux
