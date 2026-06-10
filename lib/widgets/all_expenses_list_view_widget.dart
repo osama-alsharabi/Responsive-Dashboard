@@ -42,7 +42,7 @@ class _AllExpensesListViewWidgetState extends State<AllExpensesListViewWidget> {
           .map(
             (e) => Expanded(
               child: Padding(
-                padding: EdgeInsets.only(right: e.key != 2 ? 12 : 0),
+                padding: EdgeInsets.only(right: e.key != 2 ? 5 : 0),
                 child: GestureDetector(
                   onTap: () {
                     selectedIndex = e.key;

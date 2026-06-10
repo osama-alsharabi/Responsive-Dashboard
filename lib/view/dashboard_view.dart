@@ -18,10 +18,12 @@ class DashboardView extends StatelessWidget {
           ? const CustomAppBarWidget()
           : null,
       backgroundColor: const Color(0xffF7F9FA),
-      body: AdaptiveLayoutWidget(
-        mobileLayout: (context) => const DashboardMobileLayoutWidget(),
-        tabletLayout: (context) => const DashboardTabletLayoutWidget(),
-        desktopLayout: (context) => const DashboardDesktopLayoutWidget(),
+      body: SafeArea(
+        child: AdaptiveLayoutWidget(
+          mobileLayout: (context) => const DashboardMobileLayoutWidget(),
+          tabletLayout: (context) => const DashboardTabletLayoutWidget(),
+          desktopLayout: (context) => const DashboardDesktopLayoutWidget(),
+        ),
       ),
     );
   }

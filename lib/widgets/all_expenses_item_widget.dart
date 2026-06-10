@@ -16,7 +16,7 @@ class AllExpensesItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       decoration: BoxDecoration(
         color: isBalance ? const Color(0xff4EB7F2) : null,
         border: Border.all(
@@ -32,24 +32,33 @@ class AllExpensesItemWidget extends StatelessWidget {
             image: allExpensesItemModel.image,
           ),
           const SizedBox(height: 34),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyles.textStyle16SemiBold(context).copyWith(
-              color: isBalance ? Colors.white : null,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.textStyle16SemiBold(
+                context,
+              ).copyWith(color: isBalance ? Colors.white : null),
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyles.textStyle14Regular(context).copyWith(
-              color: isBalance ? Colors.white : null,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.textStyle14Regular(
+                context,
+              ).copyWith(color: isBalance ? Colors.white : null),
             ),
           ),
           const SizedBox(height: 16),
-          Text(
-            "\$${formatNumber(allExpensesItemModel.balance)}",
-            style: AppStyles.textStyle24SemiBold(context).copyWith(
-              color: isBalance ? Colors.white : null,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              "\$${formatNumber(allExpensesItemModel.balance)}",
+              style: AppStyles.textStyle24SemiBold(
+                context,
+              ).copyWith(color: isBalance ? Colors.white : null),
             ),
           ),
         ],
